@@ -23,6 +23,9 @@ jobs:
       apellidos: Almenara Maldonado
       edad: 40
 
+      user: ${{secrets.USER}}
+      password: ${{secrets.PASSWORD}}
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -49,4 +52,10 @@ jobs:
       - name: Datos Generales
         run: |
           echo “carrera de ingeniería de sistemas”.
+
+      # Creacion de Tercer Steps - Variables de entorno secretas
+      - name: Variables de entorno secretas
+        run: |
+          echo "El usuario es: ${{env.user}}"
+          echo "El password es: ${{env.password}}"
           
