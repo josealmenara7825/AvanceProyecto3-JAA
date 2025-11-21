@@ -63,3 +63,12 @@ jobs:
       - name: Variables abiertas
         run: |
           echo "variables abiertas: ${{vars.version_de_mi_proyecto}}"
+
+    # Creacion del Quinto Steps - Variables abiertas
+      - name: variables abiertas (como variables)
+        run: |
+          echo "Version de mi proyecto: ${{vars.version_de_mi_proyecto}}",
+          echo "Nombres : $nombres",
+          echo "Apellidos : $apellidos",
+          echo "Edad : $edad".
+          
