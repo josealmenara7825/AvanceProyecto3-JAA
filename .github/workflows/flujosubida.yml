@@ -41,21 +41,25 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-      # Creacion de Primer Steps - Presentacion 
+      # Creacion del Primer Steps - Presentacion 
       - name: Presentacion
         run: |
           echo "Nombres : $nombres",
           echo "Apellidos : $apellidos",
           echo "Edad : $edad".
 
-      # Creacion de Segundo Steps - Datos Geenerales
+      # Creacion del Segundo Steps - Datos Geenerales
       - name: Datos Generales
         run: |
           echo “carrera de ingeniería de sistemas”.
 
-      # Creacion de Tercer Steps - Variables de entorno secretas
+      # Creacion del Tercer Steps - Variables de entorno secretas
       - name: Variables de entorno secretas
         run: |
           echo "El usuario es: ${{env.user}}"
           echo "El password es: ${{env.password}}"
           
+    # Creacion del Cuarto Steps - Variables abiertas
+      - name: Variables abiertas
+        run: |
+          echo "variables abiertas: ${{vars.version_de_mi_proyecto}}"
